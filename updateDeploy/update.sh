@@ -11,7 +11,8 @@ case ${serverName} in
     ;;
     "cerpart")  echo '你选择了 3'
     ;;
-    "cernet")  echo '你选择了 4'
+    "lms")  echo '你选择了 lms测试机'
+		source ./lms测试机.properties
     ;;
     "247")  
 		echo '你选择了 247'
@@ -28,20 +29,20 @@ esac
 
 
 
-# #是否备份原来的classpath
-# read -p "need backup classpath? y/n :"  backup
+#是否备份原来的classpath
+read -p "need backup classpath? y/n :"  backup
 
-# if [ ${backup} == "y" ]
-# then
-# 	echo "start backup"
-# 	if [[ ${key} != "" ]]; then
-# 		./backup.sh $host $user "" $key
-# 	else
-# 		./backup.sh $host $user $passwd
-# 	fi
+if [ ${backup} == "y" ]
+then
+	echo "start backup"
+	if [[ ${key} != "" ]]; then
+		./backup.sh $host $user "" $key
+	else
+		./backup.sh $host $user $passwd
+	fi
   	
-#   	echo "return from  backup=================================================="
-# fi
+  	echo "return from  backup=================================================="
+fi
 if [[ $passwd == "" ]]; then
 	echo "nopasswd"
 	passwd="nopasswd"

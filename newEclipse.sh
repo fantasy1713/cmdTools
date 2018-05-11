@@ -1,1 +1,1 @@
-open -n /Applications/Eclipse.app
+open -n "/Applications/Eclipse Oxygen.app"

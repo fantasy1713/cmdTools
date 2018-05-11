@@ -8,7 +8,7 @@ set dest [lindex $argv 4]
 set isfolder [lindex $argv 5]
 set key [lindex $argv 6]
 
-set timeout 30
+set timeout 300
 
 
 #判断src 是单个文件还是文件夹
